@@ -138,9 +138,10 @@ addRole = () => {
             message: 'How much is the salary for this role?'
         },
         {
-            type: 'input', 
+            type: 'list', 
             name: 'addDep', 
             message: 'What is the name of the deparment this role will be in?',
+            choices: managers
         }
     ])
     .then(answer => {
@@ -150,7 +151,37 @@ addRole = () => {
     })
 };
 
-// function to add Employee
+// function to add employee: 
+addEmployee = () => {
+    inquier.prompt([
+        {
+            type: 'input', 
+            name: 'firstName',
+            message: 'What is the first name of the employee you would like to add?',
+        },
+        {
+            type: 'input', 
+            name: 'lastName', 
+            message: 'What is the last name of the employee you would like to add?',
+        },
+        {
+            type: 'list', 
+            name: 'role', 
+            message: 'What is the role for the employee you are adding?',
+            choices: roles
+        },
+        {
+            type: 'list', 
+            name: 'addManager',
+            message: 'Who is the manager of the new employee?',
+        }
+    ])
+    .then(answer => {
+
+        
+        console.log('You have added ' + answer.firstName + answer.lastName + ' to the list of new employees');
+    })
+};
  
 
 
