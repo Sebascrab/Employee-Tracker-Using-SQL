@@ -5,6 +5,10 @@
 
 const express = require('express');
 const mysql = require('mysql2');
+const consoleTable = require('console.table');
+const inquier = require('inquirer');
+const res = require('express/lib/response');
+
 
 // server on port 3001 or heroku:
 const PORT = process.env.PORT || 3001;
@@ -28,6 +32,20 @@ const db = mysql.createConnection(
 
 
 
+
+
+
+
+
+
+
+
+
+
+// Default response if not found for other responses
+app.use((req, res) => {
+    res.status(404).end();
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
