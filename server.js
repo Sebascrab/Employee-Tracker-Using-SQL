@@ -6,7 +6,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const consoleTable = require('console.table');
-const inquier = require('inquirer');
+const inquirer = require('inquirer');
 const res = require('express/lib/response');
 
 
@@ -31,7 +31,7 @@ const db = mysql.createConnection(
 
 // prompts user to answer inital questions
 const questions = () => {
-    inquier.prompt([
+    inquirer.prompt([
         {
             type: 'list',
             name: 'view',
@@ -110,7 +110,7 @@ viewEmployees = () => {
 
 // function to add department:
 addDepartment = () => {
-    inquier.prompt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'addDepartment',
@@ -126,7 +126,7 @@ addDepartment = () => {
 
 // function to add role: 
 addRole = () => {
-    inquier.prompt([
+    inquirer.prompt([
         {
             type: 'input', 
             name: 'addRole', 
@@ -141,7 +141,7 @@ addRole = () => {
             type: 'list', 
             name: 'addDep', 
             message: 'What is the name of the deparment this role will be in?',
-            choices: managers
+            choices: departments
         }
     ])
     .then(answer => {
@@ -153,7 +153,7 @@ addRole = () => {
 
 // function to add employee: 
 addEmployee = () => {
-    inquier.prompt([
+    inquirer.prompt([
         {
             type: 'input', 
             name: 'firstName',
@@ -184,6 +184,35 @@ addEmployee = () => {
 };
  
 
+
+// function to update an employee
+
+updateEmployee = () => {
+
+
+    inquirer.prompt([
+        {
+            type: 'list', 
+            name: 'name', 
+            message: 'Which employee would you like to update?',
+            choices: employees
+        }
+    ])
+
+    .then(answer => {
+
+
+    })
+
+    inquirer.prompt([
+        {
+            type: 'list', 
+            name: 'newRole',
+            message: 'What is the new role for this employee?',
+            choices: roles
+        }
+    ])
+}
 
 
 
