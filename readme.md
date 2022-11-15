@@ -1,6 +1,6 @@
 # Employee Tracker SQL
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  ## ReadMe Description 
+  ## Description 
 
   This is an employee tracker using the mySql database. This is done with the inquirer prompts in the node.js enviornment.  
   ## Table of Contents: 
