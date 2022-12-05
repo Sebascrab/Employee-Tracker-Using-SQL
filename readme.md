@@ -42,6 +42,8 @@
   Email: alexanders.tischner@outlook.com 
 
   ![image of application](/assets/images/Employee-Tracker-Screenshot.png)
+  
+  Video Link: https://drive.google.com/file/d/19Sz39bsVk171Iejn_dEj8CkpUQwoyqr-/view
 
   
 
